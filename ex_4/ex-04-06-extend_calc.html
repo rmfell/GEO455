@@ -7,6 +7,7 @@
         <p>First number: <input type="number" id="num1" min="0" max="100" value=""></p>
         <p>Second number: <input type="number" id="num2" min="0" max="100" value=""></p>
         
+        <input type="button" id="add" value="Addition!">
         <input type="button" id="multiply" value="Multiply!">
         <input type="button" id="divide" value="Divide!">
         <input type="button" id="clear" value="Clear History!">
@@ -17,6 +18,12 @@
             var num1 = document.getElementById("num1");
             var num2 = document.getElementById("num2");
             var result = document.getElementById("result");
+            var total = 0;
+            
+            document.getElementById("add").addEventListener("click", function() {
+                total = Number(num1.value) + Number(num2.value);
+                result.innerHTML +="<p>" + num1.value + " + " + num2.value + 
+                    " = " + total + "</p>";});
             
             document.getElementById("multiply").addEventListener("click", function() {
                 result.innerHTML +="<p>" + num1.value + " * " + num2.value + 
