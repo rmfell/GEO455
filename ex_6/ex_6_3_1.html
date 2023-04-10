@@ -1,6 +1,6 @@
 <html>
    <head>
-      <title>Ex- 6-3: Effects</title>
+      <title>Ex- 6-3-1: Effects</title>
        <style>
            .charac {
                float: left;
@@ -23,7 +23,11 @@
               });
           });
           // add function for show
-
+          $(document).ready(function() {
+              $("#show-btn").click(function(){
+                  $("img").show();
+              });
+          });
       </script>
 
 	
@@ -37,5 +41,6 @@
            <img src="img/Thomson_&_Thompson.png">
        </div>
        <!-- add show button -->
+       <button id="show-btn">SHOW</button>
    </body>
 </html>

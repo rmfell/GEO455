@@ -19,15 +19,20 @@
          src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">
       </script>
 
-      <script>
+     <script>
           $(document).ready(function() {
-              $("button").click(function(){
-                  $("img").toggleClass("styleclass");
+              $("#add-btn").click(function(){
+                  $("img").addClass("styleclass"); //change to toggleClass
                   
               });
           });
-          
-
+          // Add removeClass()
+         $(document).ready(function() {
+              $("#remove-btn").click(function(){
+                  $("img").removeClass("styleclass"); //change to toggleClass
+                  
+              });
+          });
       </script>
 
 	
@@ -41,6 +46,8 @@
            <img src="img/Thomson_&_Thompson.png">
        </div>
        
-       <button>Try addClass()</button>
+       <button id = "add-btn">Try addClass()</button>
+       <!-- add button for remove class -->
+       <button id = "remove-btn">Try removeClass()</button>
    </body>
 </html>
